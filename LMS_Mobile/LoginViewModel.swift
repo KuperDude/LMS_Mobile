@@ -7,14 +7,14 @@
 
 
 import Foundation
-import Combine
+
+protocol Registration: SendCodeAllow {
+    func register(username: String, mail: String, password: String) async -> String?
+}
 
 class LoginViewModel: ObservableObject {
     var authService: AuthManager
     @Published var user: User?
-    var cancellables = Set<AnyCancellable>()
-    
-    @Published var code: Int?
     
     @Published var username: String = ""
     @Published var mail: String = ""
@@ -49,51 +49,38 @@ class LoginViewModel: ObservableObject {
     }
     
     private func addPublishers() {
-        authService.$user
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] data in
-                if let user = data {
-                    self?.user = user
-                }
-            }
-            .store(in: &cancellables)
+//        authService.$user
+//            .receive(on: DispatchQueue.main)
+//            .sink { [weak self] data in
+//                if let user = data {
+//                    self?.user = user
+//                }
+//            }
+//            .store(in: &cancellables)
     }
     
     // MARK: - User Intents
-    
-    func sendCode() {
-//        authService.sendCode(mail: mail) { [weak self] code, error in
-//            if error != nil {
-//                self?.customErrorDescription = error
-//                self?.alertStatus = .custom
-//            } else {
-//                guard let code = code else {
-//                    return
-//                }
-//                self?.code = code
-//            }
-//        }
-    }
-    func register() {
-//        authService.register(username: username, mail: mail, password: password1) { [weak self] error in
-//            if error != nil {
-//                self?.customErrorDescription = error
-//                self?.alertStatus = .custom
-//            }
-//        }
+    func register() async {
+        guard let error = await authService.register(username: username, mail: mail, password: password1) else {
+            user = await authService.user
+            return
+        }
+        
+        customErrorDescription = error
+        alertStatus = .custom
     }
 
     func checkCurrectData() -> Bool {
         if password1.count < 8 || password2.count < 8 {
-            //alertStatus = .smallPassword
+            alertStatus = .smallPassword
             return false
         }
         if password1 != password2 {
-            //alertStatus = .noEqualPassword
+            alertStatus = .noEqualPassword
             return false
         }
         if username.isEmpty || !checkCurrectUsername() {
-            //alertStatus = .usernameIsEmpty
+            alertStatus = .usernameIsEmpty
             return false
         }
         

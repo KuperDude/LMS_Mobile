@@ -20,8 +20,6 @@
 		F8A8F0E32C33E66A0012501C /* ForgotPasswordSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0DB2C33E66A0012501C /* ForgotPasswordSegment.swift */; };
 		F8A8F0E42C33E66A0012501C /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0DC2C33E66A0012501C /* ForgotPasswordView.swift */; };
 		F8A8F0E52C33E66A0012501C /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0DE2C33E66A0012501C /* ForgotPasswordViewModel.swift */; };
-		F8A8F0E72C33E6D90012501C /* SendCodeOnMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0E62C33E6D90012501C /* SendCodeOnMailView.swift */; };
-		F8A8F0E92C33E7120012501C /* LoginPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0E82C33E7120012501C /* LoginPickerView.swift */; };
 		F8A8F0FB2C33E79B0012501C /* CodeTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0F82C33E79B0012501C /* CodeTextFields.swift */; };
 		F8A8F0FC2C33E79B0012501C /* SegmentCodeTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0F92C33E79B0012501C /* SegmentCodeTextFields.swift */; };
 		F8A8F0FE2C33E8410012501C /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0FD2C33E8410012501C /* View.swift */; };
@@ -34,6 +32,10 @@
 		F8A8F10D2C33ED840012501C /* 1708031048469-open-lock.json in Resources */ = {isa = PBXBuildFile; fileRef = F8A8F10C2C33ED830012501C /* 1708031048469-open-lock.json */; };
 		F8A8F1102C33F0550012501C /* FPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F10F2C33F0550012501C /* FPView.swift */; };
 		F8A8F1132C33F6A00012501C /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = F8A8F1122C33F6A00012501C /* SwiftfulUI */; };
+		F8A8F1182C341F8E0012501C /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1172C341F8E0012501C /* PickerView.swift */; };
+		F8A8F11D2C34279A0012501C /* SendCodeOnMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F11C2C3427990012501C /* SendCodeOnMailView.swift */; };
+		F8A8F1212C3427D10012501C /* SendCodeOnMailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1202C3427D10012501C /* SendCodeOnMailViewModel.swift */; };
+		F8A8F1242C344B680012501C /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = F8A8F1232C344B680012501C /* SwiftfulRouting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +53,6 @@
 		F8A8F0DB2C33E66A0012501C /* ForgotPasswordSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordSegment.swift; sourceTree = "<group>"; };
 		F8A8F0DC2C33E66A0012501C /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		F8A8F0DE2C33E66A0012501C /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
-		F8A8F0E62C33E6D90012501C /* SendCodeOnMailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCodeOnMailView.swift; sourceTree = "<group>"; };
-		F8A8F0E82C33E7120012501C /* LoginPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPickerView.swift; sourceTree = "<group>"; };
 		F8A8F0F82C33E79B0012501C /* CodeTextFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeTextFields.swift; sourceTree = "<group>"; };
 		F8A8F0F92C33E79B0012501C /* SegmentCodeTextFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentCodeTextFields.swift; sourceTree = "<group>"; };
 		F8A8F0FD2C33E8410012501C /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -63,6 +63,9 @@
 		F8A8F10A2C33EB340012501C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F8A8F10C2C33ED830012501C /* 1708031048469-open-lock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1708031048469-open-lock.json"; sourceTree = "<group>"; };
 		F8A8F10F2C33F0550012501C /* FPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPView.swift; sourceTree = "<group>"; };
+		F8A8F1172C341F8E0012501C /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		F8A8F11C2C3427990012501C /* SendCodeOnMailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCodeOnMailView.swift; sourceTree = "<group>"; };
+		F8A8F1202C3427D10012501C /* SendCodeOnMailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCodeOnMailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A8F1132C33F6A00012501C /* SwiftfulUI in Frameworks */,
+				F8A8F1242C344B680012501C /* SwiftfulRouting in Frameworks */,
 				F8A8F1012C33E8820012501C /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,19 +101,15 @@
 		F8A8F0C12C33E2730012501C /* LMS_Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				F8A8F1142C33FDDC0012501C /* Extension */,
 				F8A8F0C22C33E2730012501C /* LMS_MobileApp.swift */,
-				F8A8F0C42C33E2730012501C /* LoginView.swift */,
 				F8A8F0D02C33E3B00012501C /* LoginViewModel.swift */,
 				F8A8F0D22C33E44B0012501C /* MainViewModel.swift */,
 				F8A8F0D42C33E4D90012501C /* AuthManager.swift */,
-				F8A8F0D62C33E5680012501C /* User.swift */,
-				F8A8F0E62C33E6D90012501C /* SendCodeOnMailView.swift */,
-				F8A8F0E82C33E7120012501C /* LoginPickerView.swift */,
-				F8A8F1142C33FDDC0012501C /* Extension */,
+				F8A8F1192C3426E60012501C /* Models */,
+				F8A8F1152C341E310012501C /* Components */,
+				F8A8F11A2C3427150012501C /* Core */,
 				F8A8F1042C33E9C80012501C /* Color.swift */,
-				F8A8F10A2C33EB340012501C /* String.swift */,
-				F8A8F1062C33EA800012501C /* UIApplication.swift */,
-				F8A8F0E02C33E66A0012501C /* ForgotPassword */,
 				F8A8F0C62C33E2760012501C /* Assets.xcassets */,
 				F8A8F0C82C33E2760012501C /* Preview Content */,
 			);
@@ -184,10 +184,63 @@
 		F8A8F1142C33FDDC0012501C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F8A8F1062C33EA800012501C /* UIApplication.swift */,
 				F8A8F0FD2C33E8410012501C /* View.swift */,
-				F8A8F1082C33EAD90012501C /* BottomSheetView.swift */,
+				F8A8F10A2C33EB340012501C /* String.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F8A8F1152C341E310012501C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F1082C33EAD90012501C /* BottomSheetView.swift */,
+				F8A8F0E02C33E66A0012501C /* ForgotPassword */,
+				F8A8F11B2C34276C0012501C /* SendCodeOnMail */,
+				F8A8F1172C341F8E0012501C /* PickerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F8A8F1192C3426E60012501C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F0D62C33E5680012501C /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F8A8F11A2C3427150012501C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F0C42C33E2730012501C /* LoginView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F8A8F11B2C34276C0012501C /* SendCodeOnMail */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F11F2C3427B50012501C /* ViewModel */,
+				F8A8F11E2C3427AD0012501C /* View */,
+			);
+			path = SendCodeOnMail;
+			sourceTree = "<group>";
+		};
+		F8A8F11E2C3427AD0012501C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F11C2C3427990012501C /* SendCodeOnMailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8A8F11F2C3427B50012501C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F1202C3427D10012501C /* SendCodeOnMailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +262,7 @@
 			packageProductDependencies = (
 				F8A8F1002C33E8820012501C /* Lottie */,
 				F8A8F1122C33F6A00012501C /* SwiftfulUI */,
+				F8A8F1232C344B680012501C /* SwiftfulRouting */,
 			);
 			productName = LMS_Mobile;
 			productReference = F8A8F0BF2C33E2730012501C /* LMS_Mobile.app */;
@@ -241,6 +295,7 @@
 			packageReferences = (
 				F8A8F0FF2C33E8820012501C /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				F8A8F1112C33F6A00012501C /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
+				F8A8F1222C344B680012501C /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
 			);
 			productRefGroup = F8A8F0C02C33E2730012501C /* Products */;
 			projectDirPath = "";
@@ -275,21 +330,22 @@
 				F8A8F0C52C33E2730012501C /* LoginView.swift in Sources */,
 				F8A8F0C32C33E2730012501C /* LMS_MobileApp.swift in Sources */,
 				F8A8F0E22C33E66A0012501C /* ForgotPasswordBottonButton.swift in Sources */,
-				F8A8F0E92C33E7120012501C /* LoginPickerView.swift in Sources */,
 				F8A8F0E12C33E66A0012501C /* ResetPasswordAnimationView.swift in Sources */,
 				F8A8F1102C33F0550012501C /* FPView.swift in Sources */,
 				F8A8F1032C33E9810012501C /* TimerView.swift in Sources */,
+				F8A8F1212C3427D10012501C /* SendCodeOnMailViewModel.swift in Sources */,
 				F8A8F1072C33EA800012501C /* UIApplication.swift in Sources */,
 				F8A8F0D72C33E5680012501C /* User.swift in Sources */,
 				F8A8F0D12C33E3B00012501C /* LoginViewModel.swift in Sources */,
+				F8A8F1182C341F8E0012501C /* PickerView.swift in Sources */,
 				F8A8F0FC2C33E79B0012501C /* SegmentCodeTextFields.swift in Sources */,
 				F8A8F0E52C33E66A0012501C /* ForgotPasswordViewModel.swift in Sources */,
+				F8A8F11D2C34279A0012501C /* SendCodeOnMailView.swift in Sources */,
 				F8A8F0D32C33E44B0012501C /* MainViewModel.swift in Sources */,
 				F8A8F0E32C33E66A0012501C /* ForgotPasswordSegment.swift in Sources */,
 				F8A8F0E42C33E66A0012501C /* ForgotPasswordView.swift in Sources */,
 				F8A8F0D52C33E4DA0012501C /* AuthManager.swift in Sources */,
 				F8A8F10B2C33EB340012501C /* String.swift in Sources */,
-				F8A8F0E72C33E6D90012501C /* SendCodeOnMailView.swift in Sources */,
 				F8A8F1052C33E9C80012501C /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +570,14 @@
 				minimumVersion = 1.2.0;
 			};
 		};
+		F8A8F1222C344B680012501C /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.5;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -526,6 +590,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F8A8F1112C33F6A00012501C /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
 			productName = SwiftfulUI;
+		};
+		F8A8F1232C344B680012501C /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8A8F1222C344B680012501C /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

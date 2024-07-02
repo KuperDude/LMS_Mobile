@@ -6,17 +6,22 @@
 //
 
 import SwiftUI
+import SwiftfulUI
+import SwiftfulRouting
 
 struct LoginView: View {
-    @ObservedObject var mainVM: MainViewModel
     
+    @Environment(\.router) var router
+    
+    @ObservedObject var mainVM: MainViewModel
     @ObservedObject var vm: LoginViewModel
     
     @State var isRegistration = false
+    @State private var isRegistrationProcessing = false
     @State var isShowAlert = false
     
     @State var pressedForgotPassword = false
-    @State var pressedRegistration = false
+    @State var pressedRegistrationCode: Int? = nil
     
     init(mainVM: MainViewModel) {
         self._mainVM = ObservedObject(initialValue: mainVM)
@@ -29,14 +34,14 @@ struct LoginView: View {
                 Spacer()
                 
                 nameApp
-                
-                createdBy
-                
+                                
                 VStack(spacing: 20) {
                     if !isRegistration {
                         Spacer()
                     }
-                    LoginPickerView(isRegistration: $isRegistration)
+                    PickerView(values: ["Вход", "Регистрация"]) { value in
+                        isRegistration = value == "Регистрация"
+                    }
                     
                     textFieldsSegment
                     
@@ -56,54 +61,53 @@ struct LoginView: View {
             
             
             ForgotPasswordView(isOpen: $pressedForgotPassword)
-            SendCodeOnMailView(isOpen: $pressedRegistration, code: $vm.code) {
-                vm.sendCode()
-            } completion: {
-                vm.register()
-                pressedRegistration = false
+                
+            SendCodeOnMailView(code: $pressedRegistrationCode, mail: vm.mail) {
+                Task {
+                    isRegistrationProcessing = true
+                    await vm.register()
+                    pressedRegistrationCode = nil
+                    isRegistrationProcessing = false
+                    
+                    guard let user = vm.user else { return }
+                    router.showScreen(.fullScreenCover) { _ in
+                        Text("New Screen")
+                    }
+                }
+            }
+            .overlay(alignment: .bottom) {
+                if isRegistrationProcessing {
+                    ProgressView()
+                }
             }
             
         }
-        .onChange(of: vm.user, perform: { user in
-            mainVM.user = user
-        })
-        .fullScreenCover(item: $vm.user, content: { user in
-            //HomeView(mainVM: mainVM)
-        })
-        .onChange(of: vm.alertStatus, perform: { status in
+        .onChange(of: vm.alertStatus) { _, status in
             guard let _ = status else { return }
             isShowAlert = true
-        })
+        }
         .alert(vm.errorText(vm.alertStatus) ?? "", isPresented: $isShowAlert) {
             Button("OK", role: .cancel) {
                 vm.alertStatus = nil
             }
         }
-        .onReceive(vm.$code, perform: { code in
-            guard let _ = code else { return }
-            UIApplication.shared.endEditing()
-            pressedRegistration = true
-        })
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(mainVM: MainViewModel())
+        RouterView { _ in
+            LoginView(mainVM: MainViewModel())
+        }
     }
 }
 
 extension LoginView {
     var nameApp: some View {
-        Text("StreetFood")
+        Text("ЦТПО Курсы")
             .font(.custom("Avenir Next", size: 49))
             .fontWeight(.bold)
             .foregroundColor(.white)
-    }
-    
-    var createdBy: some View {
-        Text("Автор: Григорий Поляков")
-            .foregroundColor(Color.init(uiColor: .lightGray))
     }
     
     
@@ -128,26 +132,28 @@ extension LoginView {
     }
     
     var loginButton: some View {
-        Button {
-            if isRegistration {
-                if vm.checkCurrectData() {
-                    vm.sendCode()
-                }
-            } else {
-                
+        
+        AsyncButton {
+            pressedRegistrationCode = try? await AuthManager.instance.sendCodeOn(mail: vm.mail)
+        } label: { isPerformingAction in
+            ZStack {
+                 if isPerformingAction {
+                       ProgressView()
+                 }
+                   
+                Text(isRegistration ? "Продолжить" : "Войти")
+                    .opacity(isPerformingAction ? 0 : 1)
             }
-        } label: {
-            Text(isRegistration ? "Продолжить" : "Войти")
-                .minimumScaleFactor(0.5)
-                .font(.system(size: 17))
-                .foregroundColor(.theme.accent)
-                .frame(maxWidth: .infinity)
-                .frame(height: 50)
-                .background {
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundStyle(Color.green)
-                }
-        }
+            .minimumScaleFactor(0.5)
+            .font(.system(size: 17))
+            .foregroundColor(.theme.accent)
+            .frame(maxWidth: .infinity)
+            .frame(height: 50)
+            .background {
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundStyle(Color.green)
+            }
+       }
     }
     
     var backgroundImage: some View {
@@ -173,7 +179,9 @@ extension LoginView {
             .underline()
             .onTapGesture {
                 //UIApplication.shared.endEditing()
-                vm.authService.user = User(id: "Anonymous", firstName: "Anonymous", lastName: "", imageURL: "")
+                Task {
+                    await vm.authService.createAnonymous()
+                }
             }
             .padding(.bottom, 50)
     }

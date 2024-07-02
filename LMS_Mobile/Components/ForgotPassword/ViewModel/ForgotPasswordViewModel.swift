@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol SendCodeAllow {
-    func resetPasswordSendCode(mail: String) async throws -> Int
+protocol ResetPasswordAllow {
+    func sendCodeOn(mail: String) async throws -> Int
     func resetPassword(mail: String, password: String) async throws -> Bool
 }
 
 class ForgotPasswordViewModel: ObservableObject {
-    var authService: SendCodeAllow
+    var authService: ResetPasswordAllow
     
     @Published var mail: String = ""
     
@@ -85,7 +85,7 @@ class ForgotPasswordViewModel: ObservableObject {
     
     func sendCode() async {
         do {
-            code = try await authService.resetPasswordSendCode(mail: mail)
+            code = try await authService.sendCodeOn(mail: mail)
             changeState()
         } catch {
             customErrorDescription = error.localizedDescription

@@ -1,5 +1,5 @@
 {
-  "originHash" : "dd3633193348383a695a8b559ff669e21927b59822daa3e1b896b7e61203aa1d",
+  "originHash" : "1cc0fe701ff26af9b9bd36ab8a2e695fcb99000039abaf39e744f4d72467b2b6",
   "pins" : [
     {
       "identity" : "lottie-ios",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "3d2d5ac6efe70874fb5ffb2f8e1d5ccd457f4366",
         "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "swiftfulrouting",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftfulThinking/SwiftfulRouting.git",
+      "state" : {
+        "revision" : "02a6e295fbcbee2f30d49b90bd5e2b11a9885d39",
+        "version" : "5.3.5"
       }
     },
     {

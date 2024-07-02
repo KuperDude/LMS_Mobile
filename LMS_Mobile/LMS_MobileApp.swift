@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftfulRouting
 
 @main
 struct LMS_MobileApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView(mainVM: MainViewModel())
+            RouterView { _ in
+                LoginView(mainVM: MainViewModel())
+            }
         }
     }
 }

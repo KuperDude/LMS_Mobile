@@ -7,21 +7,31 @@
 import Foundation
 import Combine
 
-final class AuthManager: ObservableObject {
+final actor AuthManager: ObservableObject {
     
     static var instance = AuthManager()
     
     @Published var user: User?
+    
+    func createAnonymous() {
+        self.user = User(id: "Anonymous", firstName: "Anonymous", lastName: "", imageURL: "")
+    }
 
 }
 
-extension AuthManager: SendCodeAllow {
+extension AuthManager: ResetPasswordAllow, Registration {
+    func register(username: String, mail: String, password: String) async -> String? {
+        try? await Task.sleep(nanoseconds: 2_000_000_000)
+        createAnonymous()
+        return nil
+    }
+    
     func resetPassword(mail: String, password: String) async throws -> Bool {
         try? await Task.sleep(nanoseconds: 2_000_000_000)
         return true
     }
     
-    func resetPasswordSendCode(mail: String) async throws -> Int {
+    func sendCodeOn(mail: String) async throws -> Int {
         try? await Task.sleep(nanoseconds: 2_000_000_000)
         return 100_000
     }

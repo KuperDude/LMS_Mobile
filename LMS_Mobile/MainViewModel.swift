@@ -20,7 +20,7 @@ class MainViewModel: ObservableObject {
     }
     
     func moveToLoginView() {
-        AuthManager.instance.user = nil
+        //AuthManager.instance.user = nil
         user = nil
     }
 }

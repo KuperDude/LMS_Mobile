@@ -13,13 +13,6 @@ struct User: Codable, Identifiable, Equatable {
     var lastName: String
     var imageURL: String
     
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case firstName = "first_name"
-        case lastName = "last_name"
-        case imageURL = "photo_50"
-    }
-    
     var fullName: String {
         return firstName + " " + lastName
     }
