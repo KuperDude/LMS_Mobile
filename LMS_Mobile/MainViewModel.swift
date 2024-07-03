@@ -16,7 +16,8 @@ class MainViewModel: ObservableObject {
     }
     
     func isUserAnonymous() -> Bool {
-        user?.id == "Anonymous"
+        //user?.id == "Anonymous"
+        return false
     }
     
     func moveToLoginView() {

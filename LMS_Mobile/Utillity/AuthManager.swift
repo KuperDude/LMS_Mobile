@@ -14,7 +14,7 @@ final actor AuthManager: ObservableObject {
     @Published var user: User?
     
     func createAnonymous() {
-        self.user = User(id: "Anonymous", firstName: "Anonymous", lastName: "", imageURL: "")
+        self.user = User.mock
     }
 
 }

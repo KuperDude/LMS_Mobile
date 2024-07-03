@@ -44,19 +44,6 @@ class LoginViewModel: ObservableObject {
     init(user: User?) {
         self.user = user
         self.authService = AuthManager.instance
-        
-        addPublishers()
-    }
-    
-    private func addPublishers() {
-//        authService.$user
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] data in
-//                if let user = data {
-//                    self?.user = user
-//                }
-//            }
-//            .store(in: &cancellables)
     }
     
     // MARK: - User Intents

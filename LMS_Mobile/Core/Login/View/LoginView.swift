@@ -68,7 +68,7 @@ struct LoginView: View {
                     
                     guard vm.user != nil else { return }
                     router.showScreen(.fullScreenCover) { _ in
-                        Text("New Screen")
+                        HomeView()
                     }
                 }
             }

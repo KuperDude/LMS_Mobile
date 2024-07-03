@@ -14,7 +14,6 @@
 		F8A8F0D12C33E3B00012501C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0D02C33E3B00012501C /* LoginViewModel.swift */; };
 		F8A8F0D32C33E44B0012501C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0D22C33E44B0012501C /* MainViewModel.swift */; };
 		F8A8F0D52C33E4DA0012501C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0D42C33E4D90012501C /* AuthManager.swift */; };
-		F8A8F0D72C33E5680012501C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0D62C33E5680012501C /* User.swift */; };
 		F8A8F0E12C33E66A0012501C /* ResetPasswordAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0D82C33E66A0012501C /* ResetPasswordAnimationView.swift */; };
 		F8A8F0E22C33E66A0012501C /* ForgotPasswordBottonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0DA2C33E66A0012501C /* ForgotPasswordBottonButton.swift */; };
 		F8A8F0E32C33E66A0012501C /* ForgotPasswordSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F0DB2C33E66A0012501C /* ForgotPasswordSegment.swift */; };
@@ -36,6 +35,19 @@
 		F8A8F11D2C34279A0012501C /* SendCodeOnMailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F11C2C3427990012501C /* SendCodeOnMailView.swift */; };
 		F8A8F1212C3427D10012501C /* SendCodeOnMailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1202C3427D10012501C /* SendCodeOnMailViewModel.swift */; };
 		F8A8F1242C344B680012501C /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = F8A8F1232C344B680012501C /* SwiftfulRouting */; };
+		F8A8F12D2C3575810012501C /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F12C2C3575810012501C /* CourseCell.swift */; };
+		F8A8F12F2C3577660012501C /* ImageLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F12E2C3577660012501C /* ImageLoaderView.swift */; };
+		F8A8F1322C35778A0012501C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F8A8F1312C35778A0012501C /* SDWebImageSwiftUI */; };
+		F8A8F1392C3577EB0012501C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1332C3577EB0012501C /* Constants.swift */; };
+		F8A8F13A2C3577EB0012501C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1342C3577EB0012501C /* DatabaseHelper.swift */; };
+		F8A8F13C2C3577EB0012501C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1362C3577EB0012501C /* Product.swift */; };
+		F8A8F13D2C3577EB0012501C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1372C3577EB0012501C /* User.swift */; };
+		F8A8F13F2C357B3F0012501C /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F13E2C357B3F0012501C /* SearchBarView.swift */; };
+		F8A8F1412C357BCE0012501C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1402C357BCE0012501C /* HomeView.swift */; };
+		F8A8F1502C3585BF0012501C /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F14F2C3585BF0012501C /* CustomTabBarContainerView.swift */; };
+		F8A8F1522C3585E20012501C /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1512C3585E20012501C /* CustomTabBarView.swift */; };
+		F8A8F1542C3585F00012501C /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1532C3585F00012501C /* TabBarItem.swift */; };
+		F8A8F1562C3586060012501C /* TabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1552C3586060012501C /* TabBarItemsPreferenceKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +59,6 @@
 		F8A8F0D02C33E3B00012501C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F8A8F0D22C33E44B0012501C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		F8A8F0D42C33E4D90012501C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		F8A8F0D62C33E5680012501C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F8A8F0D82C33E66A0012501C /* ResetPasswordAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordAnimationView.swift; sourceTree = "<group>"; };
 		F8A8F0DA2C33E66A0012501C /* ForgotPasswordBottonButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordBottonButton.swift; sourceTree = "<group>"; };
 		F8A8F0DB2C33E66A0012501C /* ForgotPasswordSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordSegment.swift; sourceTree = "<group>"; };
@@ -66,6 +77,18 @@
 		F8A8F1172C341F8E0012501C /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		F8A8F11C2C3427990012501C /* SendCodeOnMailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCodeOnMailView.swift; sourceTree = "<group>"; };
 		F8A8F1202C3427D10012501C /* SendCodeOnMailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCodeOnMailViewModel.swift; sourceTree = "<group>"; };
+		F8A8F12C2C3575810012501C /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		F8A8F12E2C3577660012501C /* ImageLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderView.swift; sourceTree = "<group>"; };
+		F8A8F1332C3577EB0012501C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F8A8F1342C3577EB0012501C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		F8A8F1362C3577EB0012501C /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		F8A8F1372C3577EB0012501C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F8A8F13E2C357B3F0012501C /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchBarView.swift; path = ../../../Crypto/Crypto/Core/Components/SearchBar/SearchBarView.swift; sourceTree = "<group>"; };
+		F8A8F1402C357BCE0012501C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F8A8F14F2C3585BF0012501C /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
+		F8A8F1512C3585E20012501C /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		F8A8F1532C3585F00012501C /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		F8A8F1552C3586060012501C /* TabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8A8F1322C35778A0012501C /* SDWebImageSwiftUI in Frameworks */,
 				F8A8F1132C33F6A00012501C /* SwiftfulUI in Frameworks */,
 				F8A8F1242C344B680012501C /* SwiftfulRouting in Frameworks */,
 				F8A8F1012C33E8820012501C /* Lottie in Frameworks */,
@@ -103,13 +127,12 @@
 			children = (
 				F8A8F1142C33FDDC0012501C /* Extension */,
 				F8A8F0C22C33E2730012501C /* LMS_MobileApp.swift */,
-				F8A8F0D02C33E3B00012501C /* LoginViewModel.swift */,
 				F8A8F0D22C33E44B0012501C /* MainViewModel.swift */,
 				F8A8F1252C3571B00012501C /* Utillity */,
 				F8A8F1192C3426E60012501C /* Models */,
 				F8A8F1152C341E310012501C /* Components */,
 				F8A8F11A2C3427150012501C /* Core */,
-				F8A8F1042C33E9C80012501C /* Color.swift */,
+				F8A8F1382C3577EB0012501C /* Mock */,
 				F8A8F0C62C33E2760012501C /* Assets.xcassets */,
 				F8A8F0C82C33E2760012501C /* Preview Content */,
 			);
@@ -184,6 +207,7 @@
 		F8A8F1142C33FDDC0012501C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F8A8F1042C33E9C80012501C /* Color.swift */,
 				F8A8F1062C33EA800012501C /* UIApplication.swift */,
 				F8A8F0FD2C33E8410012501C /* View.swift */,
 				F8A8F10A2C33EB340012501C /* String.swift */,
@@ -198,6 +222,10 @@
 				F8A8F0E02C33E66A0012501C /* ForgotPassword */,
 				F8A8F11B2C34276C0012501C /* SendCodeOnMail */,
 				F8A8F1172C341F8E0012501C /* PickerView.swift */,
+				F8A8F12C2C3575810012501C /* CourseCell.swift */,
+				F8A8F12E2C3577660012501C /* ImageLoaderView.swift */,
+				F8A8F13E2C357B3F0012501C /* SearchBarView.swift */,
+				F8A8F14C2C35857C0012501C /* CustomTabBar */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -205,7 +233,6 @@
 		F8A8F1192C3426E60012501C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F8A8F0D62C33E5680012501C /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,7 +240,8 @@
 		F8A8F11A2C3427150012501C /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				F8A8F0C42C33E2730012501C /* LoginView.swift */,
+				F8A8F1262C3574790012501C /* Login */,
+				F8A8F1292C3574A60012501C /* HomeView */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -251,6 +279,78 @@
 			path = Utillity;
 			sourceTree = "<group>";
 		};
+		F8A8F1262C3574790012501C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F1282C35748B0012501C /* ViewModel */,
+				F8A8F1272C3574860012501C /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F8A8F1272C3574860012501C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F0C42C33E2730012501C /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8A8F1282C35748B0012501C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F0D02C33E3B00012501C /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F8A8F1292C3574A60012501C /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F12B2C3574BC0012501C /* ViewModel */,
+				F8A8F12A2C3574B70012501C /* View */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		F8A8F12A2C3574B70012501C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F1402C357BCE0012501C /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8A8F12B2C3574BC0012501C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F8A8F1382C3577EB0012501C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F1332C3577EB0012501C /* Constants.swift */,
+				F8A8F1342C3577EB0012501C /* DatabaseHelper.swift */,
+				F8A8F1362C3577EB0012501C /* Product.swift */,
+				F8A8F1372C3577EB0012501C /* User.swift */,
+			);
+			name = Mock;
+			path = ../../SwiftUIInPractice/SwiftUIInPractice/Mock;
+			sourceTree = "<group>";
+		};
+		F8A8F14C2C35857C0012501C /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F14F2C3585BF0012501C /* CustomTabBarContainerView.swift */,
+				F8A8F1512C3585E20012501C /* CustomTabBarView.swift */,
+				F8A8F1532C3585F00012501C /* TabBarItem.swift */,
+				F8A8F1552C3586060012501C /* TabBarItemsPreferenceKey.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -271,6 +371,7 @@
 				F8A8F1002C33E8820012501C /* Lottie */,
 				F8A8F1122C33F6A00012501C /* SwiftfulUI */,
 				F8A8F1232C344B680012501C /* SwiftfulRouting */,
+				F8A8F1312C35778A0012501C /* SDWebImageSwiftUI */,
 			);
 			productName = LMS_Mobile;
 			productReference = F8A8F0BF2C33E2730012501C /* LMS_Mobile.app */;
@@ -304,6 +405,7 @@
 				F8A8F0FF2C33E8820012501C /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				F8A8F1112C33F6A00012501C /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
 				F8A8F1222C344B680012501C /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
+				F8A8F1302C35778A0012501C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = F8A8F0C02C33E2730012501C /* Products */;
 			projectDirPath = "";
@@ -333,18 +435,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A8F0FE2C33E8410012501C /* View.swift in Sources */,
+				F8A8F13A2C3577EB0012501C /* DatabaseHelper.swift in Sources */,
 				F8A8F1092C33EAD90012501C /* BottomSheetView.swift in Sources */,
+				F8A8F1412C357BCE0012501C /* HomeView.swift in Sources */,
 				F8A8F0FB2C33E79B0012501C /* CodeTextFields.swift in Sources */,
+				F8A8F12F2C3577660012501C /* ImageLoaderView.swift in Sources */,
 				F8A8F0C52C33E2730012501C /* LoginView.swift in Sources */,
 				F8A8F0C32C33E2730012501C /* LMS_MobileApp.swift in Sources */,
+				F8A8F1542C3585F00012501C /* TabBarItem.swift in Sources */,
 				F8A8F0E22C33E66A0012501C /* ForgotPasswordBottonButton.swift in Sources */,
+				F8A8F13D2C3577EB0012501C /* User.swift in Sources */,
+				F8A8F1392C3577EB0012501C /* Constants.swift in Sources */,
 				F8A8F0E12C33E66A0012501C /* ResetPasswordAnimationView.swift in Sources */,
+				F8A8F1562C3586060012501C /* TabBarItemsPreferenceKey.swift in Sources */,
 				F8A8F1102C33F0550012501C /* FPView.swift in Sources */,
 				F8A8F1032C33E9810012501C /* TimerView.swift in Sources */,
 				F8A8F1212C3427D10012501C /* SendCodeOnMailViewModel.swift in Sources */,
 				F8A8F1072C33EA800012501C /* UIApplication.swift in Sources */,
-				F8A8F0D72C33E5680012501C /* User.swift in Sources */,
+				F8A8F13C2C3577EB0012501C /* Product.swift in Sources */,
+				F8A8F12D2C3575810012501C /* CourseCell.swift in Sources */,
 				F8A8F0D12C33E3B00012501C /* LoginViewModel.swift in Sources */,
+				F8A8F13F2C357B3F0012501C /* SearchBarView.swift in Sources */,
+				F8A8F1522C3585E20012501C /* CustomTabBarView.swift in Sources */,
 				F8A8F1182C341F8E0012501C /* PickerView.swift in Sources */,
 				F8A8F0FC2C33E79B0012501C /* SegmentCodeTextFields.swift in Sources */,
 				F8A8F0E52C33E66A0012501C /* ForgotPasswordViewModel.swift in Sources */,
@@ -355,6 +467,7 @@
 				F8A8F0D52C33E4DA0012501C /* AuthManager.swift in Sources */,
 				F8A8F10B2C33EB340012501C /* String.swift in Sources */,
 				F8A8F1052C33E9C80012501C /* Color.swift in Sources */,
+				F8A8F1502C3585BF0012501C /* CustomTabBarContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +609,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,6 +639,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,6 +701,14 @@
 				minimumVersion = 5.3.5;
 			};
 		};
+		F8A8F1302C35778A0012501C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -603,6 +726,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F8A8F1222C344B680012501C /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
 			productName = SwiftfulRouting;
+		};
+		F8A8F1312C35778A0012501C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8A8F1302C35778A0012501C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

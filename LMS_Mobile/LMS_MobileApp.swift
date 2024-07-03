@@ -13,6 +13,7 @@ struct LMS_MobileApp: App {
     var body: some Scene {
         WindowGroup {
             RouterView { _ in
+                //AppTabBarView()
                 LoginView(mainVM: MainViewModel())
             }
         }
