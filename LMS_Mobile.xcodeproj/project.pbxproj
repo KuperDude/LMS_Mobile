@@ -105,7 +105,7 @@
 				F8A8F0C22C33E2730012501C /* LMS_MobileApp.swift */,
 				F8A8F0D02C33E3B00012501C /* LoginViewModel.swift */,
 				F8A8F0D22C33E44B0012501C /* MainViewModel.swift */,
-				F8A8F0D42C33E4D90012501C /* AuthManager.swift */,
+				F8A8F1252C3571B00012501C /* Utillity */,
 				F8A8F1192C3426E60012501C /* Models */,
 				F8A8F1152C341E310012501C /* Components */,
 				F8A8F11A2C3427150012501C /* Core */,
@@ -241,6 +241,14 @@
 				F8A8F1202C3427D10012501C /* SendCodeOnMailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F8A8F1252C3571B00012501C /* Utillity */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F0D42C33E4D90012501C /* AuthManager.swift */,
+			);
+			path = Utillity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

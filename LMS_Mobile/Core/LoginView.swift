@@ -31,14 +31,9 @@ struct LoginView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 20) {
-                Spacer()
-                
                 nameApp
                                 
                 VStack(spacing: 20) {
-                    if !isRegistration {
-                        Spacer()
-                    }
                     PickerView(values: ["Вход", "Регистрация"]) { value in
                         isRegistration = value == "Регистрация"
                     }
@@ -53,7 +48,9 @@ struct LoginView: View {
                     
                     loginAsAnonymousButton
                 }
+                .frame(maxHeight: .infinity, alignment: .bottom)
             }
+            .frame(maxHeight: .infinity, alignment: .bottom)
             .padding(.horizontal, 20)
             .background {
                 backgroundImage
@@ -69,7 +66,7 @@ struct LoginView: View {
                     pressedRegistrationCode = nil
                     isRegistrationProcessing = false
                     
-                    guard let user = vm.user else { return }
+                    guard vm.user != nil else { return }
                     router.showScreen(.fullScreenCover) { _ in
                         Text("New Screen")
                     }
@@ -107,7 +104,7 @@ extension LoginView {
         Text("ЦТПО Курсы")
             .font(.custom("Avenir Next", size: 49))
             .fontWeight(.bold)
-            .foregroundColor(.white)
+            .foregroundColor(.theme.accent)
     }
     
     
