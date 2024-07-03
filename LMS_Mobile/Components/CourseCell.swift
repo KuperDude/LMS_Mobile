@@ -14,6 +14,8 @@ struct CourseCell: View {
     
     var body: some View {
         ZStack {
+            Color.theme.secondaryText
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             
             ImageLoaderView(urlString: imageName, resizingMode: .fill)
                 .foregroundStyle(Color.theme.background)

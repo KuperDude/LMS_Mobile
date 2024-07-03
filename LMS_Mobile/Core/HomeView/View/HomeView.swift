@@ -9,8 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var searchText = ""
-    
     @State var tabSelection: TabBarItem = .allCourse
     
     var body: some View {
@@ -20,29 +18,9 @@ struct HomeView: View {
             Color.theme.background.ignoresSafeArea()
             
             CustomTabBarContainerView(selection: $tabSelection) {
-                ScrollView(.vertical) {
-                    LazyVStack(spacing: 16, pinnedViews: [.sectionHeaders], content: {
-                        Section {
-                            ForEach(0..<10) { _ in
-                                CourseCell()
-                            }
-                            .offset(y: -8)
-                        } header: {
-                            ZStack {
-                                Rectangle()
-                                    .frame(maxHeight: .infinity, alignment: .top)
-                                    .foregroundColor(.theme.background)
-                                SearchBarView(searchText: $searchText)
-                                    .foregroundColor(.theme.accent)
-                            }
-                        }
-                    })
-                }
-                .scrollIndicators(.hidden)
-                .clipped()
-                .ignoresSafeArea(.all, edges: .bottom)
-                .padding(.horizontal, 8)
-                .tabBarItem(tab: .allCourse, selection: $tabSelection)
+                
+                AllCourseView()
+                    .tabBarItem(tab: .allCourse, selection: $tabSelection)
                 
                 Text("Мои курсы")
                     .tabBarItem(tab: .myCourse, selection: $tabSelection)
@@ -53,8 +31,7 @@ struct HomeView: View {
                 Text("Профиль")
                     .tabBarItem(tab: .profile, selection: $tabSelection)
             }
-            
-            
+            .ignoresSafeArea(.keyboard, edges: .bottom)
 
         }
     }
