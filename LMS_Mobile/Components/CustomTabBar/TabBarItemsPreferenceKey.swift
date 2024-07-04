@@ -37,15 +37,15 @@ struct TabBarItemViewModiferWithOnAppear: ViewModifier {
     @Binding var selection: TabBarItem
     
     @ViewBuilder func body(content: Content) -> some View {
-        if selection == tab {
+        //if selection == tab {
             content
-                .opacity(1)
+                .opacity(selection == tab ? 1 : 0)
                 .preference(key: TabBarItemsPreferenceKey.self, value: [tab])
-        } else {
-            Text("")
-                .opacity(0)
-                .preference(key: TabBarItemsPreferenceKey.self, value: [tab])
-        }
+//        } else {
+//            Text("")
+//                .opacity(0)
+//                .preference(key: TabBarItemsPreferenceKey.self, value: [tab])
+//        }
     }
     
 }

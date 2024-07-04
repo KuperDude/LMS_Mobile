@@ -53,6 +53,8 @@
 		F8A8F15C2C35E8750012501C /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F15B2C35E8750012501C /* CourseDetailView.swift */; };
 		F8A8F1692C35EA370012501C /* CourseDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1682C35EA370012501C /* CourseDetailHeaderView.swift */; };
 		F8A8F16B2C35ECCA0012501C /* HTMLStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F16A2C35ECCA0012501C /* HTMLStringView.swift */; };
+		F8A8F1722C36ED000012501C /* MyCoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1712C36ED000012501C /* MyCoursesView.swift */; };
+		F8A8F1752C36F01D0012501C /* MyCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1742C36F01D0012501C /* MyCourseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +101,8 @@
 		F8A8F15B2C35E8750012501C /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 		F8A8F1682C35EA370012501C /* CourseDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailHeaderView.swift; sourceTree = "<group>"; };
 		F8A8F16A2C35ECCA0012501C /* HTMLStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLStringView.swift; sourceTree = "<group>"; };
+		F8A8F1712C36ED000012501C /* MyCoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesView.swift; sourceTree = "<group>"; };
+		F8A8F1742C36F01D0012501C /* MyCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,13 +235,14 @@
 			children = (
 				F8A8F1082C33EAD90012501C /* BottomSheetView.swift */,
 				F8A8F0E02C33E66A0012501C /* ForgotPassword */,
+				F8A8F14C2C35857C0012501C /* CustomTabBar */,
 				F8A8F11B2C34276C0012501C /* SendCodeOnMail */,
 				F8A8F1172C341F8E0012501C /* PickerView.swift */,
 				F8A8F12C2C3575810012501C /* CourseCell.swift */,
 				F8A8F12E2C3577660012501C /* ImageLoaderView.swift */,
 				F8A8F13E2C357B3F0012501C /* SearchBarView.swift */,
 				F8A8F1682C35EA370012501C /* CourseDetailHeaderView.swift */,
-				F8A8F14C2C35857C0012501C /* CustomTabBar */,
+				F8A8F16A2C35ECCA0012501C /* HTMLStringView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				F8A8F1262C3574790012501C /* Login */,
 				F8A8F1292C3574A60012501C /* HomeView */,
 				F8A8F16C2C35F9E00012501C /* AllCourse */,
+				F8A8F16F2C36ECA30012501C /* MyCourse */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -360,7 +366,6 @@
 				F8A8F1512C3585E20012501C /* CustomTabBarView.swift */,
 				F8A8F1532C3585F00012501C /* TabBarItem.swift */,
 				F8A8F1552C3586060012501C /* TabBarItemsPreferenceKey.swift */,
-				F8A8F16A2C35ECCA0012501C /* HTMLStringView.swift */,
 			);
 			path = CustomTabBar;
 			sourceTree = "<group>";
@@ -386,6 +391,31 @@
 			isa = PBXGroup;
 			children = (
 				F8A8F1592C35B21B0012501C /* AllCourseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F8A8F16F2C36ECA30012501C /* MyCourse */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F1732C36F0060012501C /* ViewModel */,
+				F8A8F1702C36ECE90012501C /* View */,
+			);
+			path = MyCourse;
+			sourceTree = "<group>";
+		};
+		F8A8F1702C36ECE90012501C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F1712C36ED000012501C /* MyCoursesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F8A8F1732C36F0060012501C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F1742C36F01D0012501C /* MyCourseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -492,6 +522,7 @@
 				F8A8F1562C3586060012501C /* TabBarItemsPreferenceKey.swift in Sources */,
 				F8A8F1102C33F0550012501C /* FPView.swift in Sources */,
 				F8A8F1032C33E9810012501C /* TimerView.swift in Sources */,
+				F8A8F1752C36F01D0012501C /* MyCourseViewModel.swift in Sources */,
 				F8A8F1212C3427D10012501C /* SendCodeOnMailViewModel.swift in Sources */,
 				F8A8F1072C33EA800012501C /* UIApplication.swift in Sources */,
 				F8A8F13C2C3577EB0012501C /* Product.swift in Sources */,
@@ -500,6 +531,7 @@
 				F8A8F13F2C357B3F0012501C /* SearchBarView.swift in Sources */,
 				F8A8F1522C3585E20012501C /* CustomTabBarView.swift in Sources */,
 				F8A8F1182C341F8E0012501C /* PickerView.swift in Sources */,
+				F8A8F1722C36ED000012501C /* MyCoursesView.swift in Sources */,
 				F8A8F15A2C35B21B0012501C /* AllCourseViewModel.swift in Sources */,
 				F8A8F15C2C35E8750012501C /* CourseDetailView.swift in Sources */,
 				F8A8F0FC2C33E79B0012501C /* SegmentCodeTextFields.swift in Sources */,

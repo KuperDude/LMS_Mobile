@@ -60,7 +60,6 @@ struct SendCodeOnMailView: View {
         .alert(vm.errorText(vm.alertStatus) ?? "", isPresented: $isShowAlert) {
             Button("OK", role: .cancel) {
                 vm.alertStatus = nil
-                completion()
             }
         }
     }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @ObservedObject var mainVM: MainViewModel
+    
     @State var tabSelection: TabBarItem = .allCourse
     
     var body: some View {
@@ -19,10 +21,10 @@ struct HomeView: View {
             
             CustomTabBarContainerView(selection: $tabSelection) {
                 
-                AllCourseView()
+                AllCourseView(mainVM: mainVM)
                     .tabBarItem(tab: .allCourse, selection: $tabSelection)
                 
-                Text("Мои курсы")
+                MyCoursesView(mainVM: mainVM)
                     .tabBarItem(tab: .myCourse, selection: $tabSelection)
                 
                 Text("ДЗ")
@@ -34,9 +36,12 @@ struct HomeView: View {
             .ignoresSafeArea(.keyboard, edges: .bottom)
 
         }
+        .task {
+            await mainVM.getData()
+        }
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(mainVM: MainViewModel())
 }

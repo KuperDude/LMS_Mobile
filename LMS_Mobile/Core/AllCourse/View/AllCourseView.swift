@@ -12,17 +12,18 @@ struct AllCourseView: View {
     
     @Environment(\.router) var router
     
+    @ObservedObject var mainVM: MainViewModel
     @StateObject var vm = AllCourseViewModel()
     
     var body: some View {
         ScrollView(.vertical) {
             LazyVStack(spacing: 16, pinnedViews: [.sectionHeaders], content: {
                 Section {
-                    ForEach(vm.filteredProducts) { product in
+                    ForEach(vm.filteredCourses) { product in
                         CourseCell(imageName: product.firstImage, title: product.title)
                             .onTapGesture {
                                 router.showScreen(.push) { _ in
-                                    CourseDetailView(product: product)
+                                    CourseDetailView(course: product)
                                 }
                             }
                     }
@@ -42,9 +43,10 @@ struct AllCourseView: View {
         .clipped()
         .ignoresSafeArea(.all, edges: .bottom)
         .padding(.horizontal, 8)
-        .task {
-            await vm.getData()
-        }
+        .onReceive(mainVM.$courses, perform: { courses in
+            vm.products = courses
+            vm.filteredCourses = courses
+        })
     }
 }
 
@@ -54,7 +56,7 @@ struct AllCourseView: View {
             
             Color.theme.background.ignoresSafeArea()
             
-            AllCourseView()
+            AllCourseView(mainVM: MainViewModel())
         }
     }
 }

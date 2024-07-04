@@ -68,7 +68,7 @@ struct LoginView: View {
                     
                     guard vm.user != nil else { return }
                     router.showScreen(.fullScreenCover) { _ in
-                        HomeView()
+                        HomeView(mainVM: mainVM)
                     }
                 }
             }
@@ -131,7 +131,10 @@ extension LoginView {
     var loginButton: some View {
         
         AsyncButton {
-            pressedRegistrationCode = try? await AuthManager.instance.sendCodeOn(mail: vm.mail)
+            router.showScreen(.fullScreenCover) { _ in
+                HomeView(mainVM: mainVM)
+            }
+            //pressedRegistrationCode = try? await AuthManager.instance.sendCodeOn(mail: vm.mail)
         } label: { isPerformingAction in
             ZStack {
                  if isPerformingAction {

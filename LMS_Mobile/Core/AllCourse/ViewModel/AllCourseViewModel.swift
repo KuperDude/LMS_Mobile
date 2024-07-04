@@ -14,22 +14,10 @@ class AllCourseViewModel: ObservableObject {
     
     @Published var searchText: String = ""
     @Published var products: [Product] = []
-    @Published var filteredProducts: [Product] = []
-    private let databaseHelper = DatabaseHelper()
+    @Published var filteredCourses: [Product] = []
     
     init() {
         subscribers()
-    }
-    
-    @MainActor
-    func getData() async {
-        guard products.isEmpty else { return }
-        do {
-            products = try await databaseHelper.getProducts()
-            filteredProducts = products
-        } catch {
-            
-        }
     }
     
     func subscribers() {
@@ -42,14 +30,13 @@ class AllCourseViewModel: ObservableObject {
                 guard let products = self?.products else { return }
                 
                 if text == "" {
-                    self?.filteredProducts = products
+                    self?.filteredCourses = products
                 } else {
-                    self?.filteredProducts = products.filter({ $0.title.capitalized.contains(text.capitalized) })
+                    self?.filteredCourses = products.filter({ $0.title.capitalized.contains(text.capitalized) })
                 }
             }
             .store(in: &cancellables)
             
     }
-    
     
 }

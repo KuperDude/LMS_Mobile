@@ -9,10 +9,23 @@ import Foundation
 import SwiftUI
 
 class MainViewModel: ObservableObject {
+    
     @Published var user: User?
+    @Published var courses: [Product] = []
+    private let databaseHelper = DatabaseHelper()
     
     init(user: User? = nil) {
         self.user = user
+    }
+    
+    @MainActor
+    func getData() async {
+        guard courses.isEmpty else { return }
+        do {
+            courses = try await databaseHelper.getProducts()
+        } catch {
+            
+        }
     }
     
     func isUserAnonymous() -> Bool {
@@ -24,6 +37,7 @@ class MainViewModel: ObservableObject {
         //AuthManager.instance.user = nil
         user = nil
     }
+    
 }
 
 // MARK: - User Intents
