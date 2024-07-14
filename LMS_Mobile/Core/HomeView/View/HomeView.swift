@@ -30,7 +30,7 @@ struct HomeView: View {
                 Text("ДЗ")
                     .tabBarItem(tab: .homework, selection: $tabSelection)
                 
-                Text("Профиль")
+                ProfileView()
                     .tabBarItem(tab: .profile, selection: $tabSelection)
             }
             .ignoresSafeArea(.keyboard, edges: .bottom)

@@ -55,6 +55,7 @@
 		F8A8F16B2C35ECCA0012501C /* HTMLStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F16A2C35ECCA0012501C /* HTMLStringView.swift */; };
 		F8A8F1722C36ED000012501C /* MyCoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1712C36ED000012501C /* MyCoursesView.swift */; };
 		F8A8F1752C36F01D0012501C /* MyCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1742C36F01D0012501C /* MyCourseViewModel.swift */; };
+		F8A8F1792C3717780012501C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8F1782C3717780012501C /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		F8A8F16A2C35ECCA0012501C /* HTMLStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLStringView.swift; sourceTree = "<group>"; };
 		F8A8F1712C36ED000012501C /* MyCoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesView.swift; sourceTree = "<group>"; };
 		F8A8F1742C36F01D0012501C /* MyCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseViewModel.swift; sourceTree = "<group>"; };
+		F8A8F1782C3717780012501C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 				F8A8F1292C3574A60012501C /* HomeView */,
 				F8A8F16C2C35F9E00012501C /* AllCourse */,
 				F8A8F16F2C36ECA30012501C /* MyCourse */,
+				F8A8F1762C3717310012501C /* Profile */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -420,6 +423,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F8A8F1762C3717310012501C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F1772C3717560012501C /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F8A8F1772C3717560012501C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F8A8F1782C3717780012501C /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -543,6 +562,7 @@
 				F8A8F0D52C33E4DA0012501C /* AuthManager.swift in Sources */,
 				F8A8F10B2C33EB340012501C /* String.swift in Sources */,
 				F8A8F1052C33E9C80012501C /* Color.swift in Sources */,
+				F8A8F1792C3717780012501C /* ProfileView.swift in Sources */,
 				F8A8F1502C3585BF0012501C /* CustomTabBarContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
